@@ -82,16 +82,9 @@ class qtype_kprime_renderer extends qtype_renderer {
     public function formulation_and_controls(question_attempt $qa, question_display_options $displayoptions) {
         global $CFG;
 
-        if ($CFG->version > 2025041403) {
-            // Styles for Moodle 5.0 and later with Bootstrap 5.
-            $tableclass = 'table-reboot';
-            $tdadditionalclass = ' p-3';
-            $tdcenterclass = ' text-center';
-        } else {
-            $tableclass = 'generaltable';
-            $tdadditionalclass = '';
-            $tdcenterclass = '';
-        }
+        $tableclass = 'generaltable qtype_kprime_generaltable';
+        $tdadditionalclass = '';
+        $tdcenterclass = '';
 
         $question = $qa->get_question();
         $response = $question->get_response($qa);
@@ -216,9 +209,6 @@ class qtype_kprime_renderer extends qtype_renderer {
                         ['class' => 'kprimespecificfeedback']
                     )
                 );
-                $rowdata[] = $cell;
-            } else {
-                $cell = new html_table_cell(html_writer::tag('div', ''));
                 $rowdata[] = $cell;
             }
 
