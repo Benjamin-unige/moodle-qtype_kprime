@@ -298,7 +298,7 @@ body#page-question-type-kprime .optionbox,
 #page-mod-quiz-attempt .que.kprime .kprimeresponsebutton label {
     padding: 10px;
 }
-.qtype_mtf_generaltable {
+.qtype_kprime_generaltable {
     width: 100%;
     margin-bottom: 1rem;
     color: var(--bs-emphasis-color);
