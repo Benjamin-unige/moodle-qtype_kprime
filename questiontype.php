@@ -769,7 +769,6 @@ class qtype_kprime extends question_type {
             ['#', 'numberofcolumns', 0, '#'],
             QTYPE_KPRIME_NUMBER_OF_RESPONSES
         );
-        $question->numberofcolumns = min($question->numberofcolumns, QTYPE_KPRIME_NUMBER_OF_RESPONSES);
 
         $rows = $data['#']['row'];
         $i = 1;
@@ -835,10 +834,6 @@ class qtype_kprime extends question_type {
 
         foreach ($columns as $column) {
             $number = $format->getpath($column, ['@', 'number'], $j++);
-            if ($number > $question->numberofcolumns) {
-                continue;
-            }
-
             $question->{'responsetext_' . $number} = $format->getpath(
                 $column,
                 ['#', 'responsetext', 0, '#', 'text', 0, '#'],
@@ -854,10 +849,6 @@ class qtype_kprime extends question_type {
             $rownumber = $format->getpath($weight, ['@', 'rownumber'], 1);
             $columnnumber = $format->getpath($weight, ['@', 'columnnumber'], 1);
             $value = $format->getpath($weight, ['#', 'value', 0, '#'], 0.0);
-
-            if ($number > $question->numberofcolumns) {
-                continue;
-            }
 
             if ($value > 0.0) {
                 $question->{'weightbutton_' . $rownumber} = $columnnumber;

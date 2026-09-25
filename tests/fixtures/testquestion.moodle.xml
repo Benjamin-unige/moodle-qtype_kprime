@@ -35,7 +35,7 @@
 </scoringmethod>
     <shuffleanswers>false</shuffleanswers>
     <numberofrows>2</numberofrows>
-    <numberofcolumns>3</numberofcolumns>
+    <numberofcolumns>2</numberofcolumns>
     <row number="1">
       <optiontext format="html">
         <text><![CDATA[<img src="@@PLUGINFILE@@/testimage2.png" alt="testimage2AltDescription" width="100" height="100" class="img-responsive atto_image_button_text-bottom">option text 1]]></text>
@@ -63,11 +63,6 @@
         <text>False</text>
       </responsetext>
     </column>
-    <column number="3">
-      <responsetext format="moodle_auto_format">
-        <text>Unsupported response</text>
-      </responsetext>
-    </column>
     <weight rownumber="1" columnnumber="1">
       <value>
          1.000
@@ -76,11 +71,6 @@
     <weight rownumber="1" columnnumber="2">
       <value>
          0.000
-      </value>
-    </weight>
-    <weight rownumber="1" columnnumber="3">
-      <value>
-         1.000
       </value>
     </weight>
     <weight rownumber="2" columnnumber="1">
